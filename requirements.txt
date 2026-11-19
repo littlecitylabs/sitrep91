@@ -1,0 +1,33 @@
+# The package versions SITREP91 is developed and tested with, on Python 3.13.
+# The release zip bundles exactly these; build_release.py installs from here.
+#   python -m pip install -r requirements.txt
+#
+# Every version is pinned on purpose. Unpinned, bleak 3.0.2 resolves to
+# winrt 4.x, which has never been tested. matplotlib is left out: only the
+# chart scripts use it (python -m pip install matplotlib to run them).
+
+# GUI. PySide6-Essentials, not PySide6: the app uses only Core/Gui/Widgets
+# and OpenGL (for pyqtgraph), none of the Addons modules.
+PySide6-Essentials==6.11.1
+shiboken6==6.11.1
+pyqtgraph==0.14.0
+numpy==2.5.2
+
+# Bluetooth LE.
+bleak==3.0.2
+
+# bleak's Windows backend. Windows only; bleak brings its own backend on
+# other platforms.
+winrt-runtime==3.2.1 ; sys_platform == "win32"
+winrt-Windows.Devices.Bluetooth==3.2.1 ; sys_platform == "win32"
+winrt-Windows.Devices.Bluetooth.Advertisement==3.2.1 ; sys_platform == "win32"
+winrt-Windows.Devices.Bluetooth.GenericAttributeProfile==3.2.1 ; sys_platform == "win32"
+winrt-Windows.Devices.Enumeration==3.2.1 ; sys_platform == "win32"
+winrt-Windows.Devices.Radios==3.2.1 ; sys_platform == "win32"
+winrt-Windows.Foundation==3.2.1 ; sys_platform == "win32"
+winrt-Windows.Foundation.Collections==3.2.1 ; sys_platform == "win32"
+winrt-Windows.Storage.Streams==3.2.1 ; sys_platform == "win32"
+
+# Pulled in by the packages above; pinned so the release is reproducible.
+colorama==0.4.6
+typing_extensions==4.16.0

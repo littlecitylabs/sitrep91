@@ -1,0 +1,17 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# The release build's scratch and output (build_release.py)
+build/
+dist/
+
+# What the app writes when run from a source checkout
+data/
+runs/
+demo_runs/
+logs/
+settings.ini
+
+# Local safety copies
+*.bak
