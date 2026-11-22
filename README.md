@@ -501,7 +501,7 @@ than a few of my hunches (the slot temperature started as one). Nothing that
 controls the charger was switched on until it had been tested on the bench,
 and v1.0 went through blind reviews before it shipped.
 
-SITREP91 is a Little City Labs project by minimumflair.
+SITREP91 is a [Little City Labs](https://littlecitylabs.com/sitrep91/) project by minimumflair.
 
 ## License
 
